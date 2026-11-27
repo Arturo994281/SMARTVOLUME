@@ -15,11 +15,11 @@
       <a class="navbar-brand ms-2" href="{% url 'inicio' %}">SMARTVOLUME</a>
 
       <div class="dropdown">
-        <a class="btn btn-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">Usuario</a>
+        <a class="btn btn-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ request.user.username }}</a>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item" href="{% url 'inicio' %}">Inicio</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="{% url 'login' %}">Cerrar sesión</a></li>
+          <li><a class="dropdown-item" href="{% url 'salir' %}">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
